@@ -24,6 +24,10 @@ const app = express();
 //middlewares
 app.use(bodyParser.json());
 app.use(cors());
+app.use((req, res, next) => {
+  res.header({ "Access-Control-Allow-Origin": "*" });
+  next();
+});
 
 //endpoints
 app.get("/", (req, res) => {

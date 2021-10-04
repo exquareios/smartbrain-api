@@ -16,8 +16,6 @@ const db = knex({
   },
 });
 
-db.select("*").from("users");
-
 //app config
 const app = express();
 
